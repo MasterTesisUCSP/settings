@@ -1,0 +1,25 @@
+
+
+sudo apt-get install build-essential
+sudo apt-get install qtcreator
+sudo apt-get install qt5-default
+
+sudo apt-get install libboost-all-dev
+
+# Debian or Linux Mint
+sudo apt-get install libcgal-dev # install the CGAL library
+sudo apt-get install libcgal-demo # install the CGAL demos
+tar --gzip -xf /usr/share/doc/libcgal-demo/examples.tar.gz
+
+https://askubuntu.com/questions/668438/install-cgal-lib-version-4-5-1
+
+http://homepages.math.uic.edu/~ddumas/teaching/2014/spring/mcs481/cgal-example/
+
+
+sudo apt update
+sudo apt install ocl-icd-opencl-dev
+sudo apt-get install opencl-headers
+clinfo
+
+cambiamos el BMesh.pro del proyecto QT
+
