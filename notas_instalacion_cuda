@@ -1,0 +1,37 @@
+https://askubuntu.com/questions/61396/how-do-i-install-the-nvidia-drivers
+
+
+1. revisar cual es la version de drivers recomendada:
+	ubuntu-drivers devices | grep recommended
+2. agregar el repositorio de los drivers
+	sudo add-apt-repository ppa:graphics-drivers/ppa
+3.   install the header files of the kernel version you are using at that moment for the driver to install correctly
+	sudo apt-get install linux-headers-generic
+4. sudo apt update
+5. sudo apt upgrade
+6. sudo apt install nvidia-driver-396
+
+sudo nvidia-xconfig
+
+
+1er SystemBsck
+	gcc : 5.4
+	nvidia : 384 recomended
+	cont adic : usando X.org X server
+
+2do Systemback
+	gcc : 4.9
+	dpkg -l | grep nvidia
+		nvidia: 361
+	
+
+
+https://gist.github.com/li-ch/fe910ce30bf56819043f65e4bea1ff21
+https://github.com/BVLC/caffe/wiki/Caffe-installing-script-for-ubuntu-16.04---support-Cuda-8
+	
+luego del error de
+./../ORUtils/MemoryBlock.h(196) : cudaSafeCall() Runtime API error : CUDA driver version is insufficient for CUDA runtime version.
+
+sudo -at -get install cuda
+antes agregue el repo
+

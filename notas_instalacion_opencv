@@ -1,0 +1,36 @@
+OpenGL version string: 3.0 Mesa 18.0.5
+OpenGL version string: 3.0 Mesa 18.0.5
+
+opencv
+
+
+sudo cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DWITH_TBB=ON -DBUILD_NEW_PYTHON_SUPPORT=OFF -D INSTALL_C_EXAMPLES=OFF -DINSTALL_PYTHON_EXAMPLES=OFF -DBUILD_DOCS=OFF -DBUILD_EXAMPLES=OFF -DWITH_QT=OFF -DWITH_OPENGL=ON -DWITH_EIGEN=ON -DWITH_GDAL=ON -DWITH_XINE=ON -DWITH_CUBLAS=ON -DWITH_V4L=ON -DWITH_VTK=OFF -DWITH_CUDA=OFF ..
+
+sudo make -j8
+sudo make install
+
+Verify if you are using VTK7. If yes, then replace vtkRenderingOpenGL by vtkRenderingOpenGL2 in in line 6 of the file /cmake/OpenCVDetectVTK.cmake
+
+
+sudo find /home/ -name 'libvtkIOLegacy*'
+ sudo gedit ~/.bashrc 
+
+sudo find /home/ -name 'vtkUnstructuredGridReader*'
+/home/fil/VTK-8.2.0/IO/Legacy/vtkUnstructuredGridReader.h
+
+
+
+ccmake ..
+make install
+	dio error al 100% que no se habia creado la carpeta ls /usr/local/lib/cmake/vtk-8.2.0
+
+how to check if a library is installed?
+ldconfig -p | grep libjpeg
+
+http://ubuntuhandbook.org/index.php/2017/04/custom-screen-resolution-ubuntu-desktop/
+
+
+xrandr -d :0
+ dconf reset /com/ubuntu/user-interface/scale-factor
+
+
