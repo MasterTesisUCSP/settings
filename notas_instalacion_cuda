@@ -38,3 +38,15 @@ antes agregue el repo
 
 **** secure boo
 I solved "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver" on my ASUS laptop with GTX 950m and Ubuntu 18.04 by disabling Secure Boot Control from BIOS.
+
+luego de add el path en .bashrc
+fil@fil:~$ sudo gedit /etc/ld.so.conf.d/cuda.conf^C
+and add the line,
+
+/usr/local/cuda/lib64
+
+Then run
+
+sudo ldconfig
+
+
